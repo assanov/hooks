@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 export default function useAsync(
     callback: () => Promise<any>,
-    dependencies = []
+    dependencies: React.DependencyList = []
 ) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState();
